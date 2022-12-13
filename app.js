@@ -70,6 +70,11 @@ app.post("/upload", (req, res) => {
   })
 })
 
+//File Download API From Application directory
+app.get("/download", (req, res) => {
+  res.download("./download/1.jpg")
+})
+
 // Server Listen
 app.listen(PORT, () => {
   console.log(`Server is running by http://localhost:${PORT}`)
